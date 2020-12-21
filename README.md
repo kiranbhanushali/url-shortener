@@ -3,8 +3,9 @@
 A simple url shortener api made with using  Node JS,express,handlebar,MongoDb.
 
 # features 
-Short the url with custom endpoints.
-Gives Analysis of how many times url clicks.
+Short the url randome endpoints.
+Can add custom endpoints.
+Gives Analysis of how many times url clicks on website.
 
 # link : [http://srturl.glitch.me/](http://srturl.glitch.me/)
 
