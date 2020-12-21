@@ -1,0 +1,102 @@
+<html>
+   <head>
+      <title>Url Shortener</title>
+      <script defer>
+         function myFunction() {
+             var checkBox = document.getElementById("custom-url-check");
+             var x = document.getElementById("custom-1");
+             if (checkBox.checked == true) {
+                 x.style.visibility = "visible";
+             } else {
+                 x.style.visibility = "hidden";
+             }
+         }
+         
+      </script>
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+         crossorigin="anonymous"
+         />
+      <link href="/public/style.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body>
+      <div id="container-main" class="overlay">
+         <div class="d-flex flex-column  container justify-items-center align-items-center" >
+            <div class="navbar p-3 d-flex title">
+               <h1 id="main-header" class ="px-4 navbar-header  " style="color:white">
+                  <a style="color:white;text-decoration: none;" href="/">Url Shortener</a>
+               </h1>
+               <h4 id="main" class="btn btn-primary" style="color:white">
+                  <a style="color:white;text-decoration: none;" href="/a">Analysis</a>
+               </h4>
+            </div>
+            <div
+               id="main-card"
+               class="d-flex  card flex-column justify-content-center align-items-center"
+               >
+               {{#if alert}}
+               <div class="alert alert-danger" role="alert">
+                  Invalid Url
+               </div>
+               {{/if}}
+               <div class=" p-2">
+                  <h2 class="page-header">
+                     Paste the URL to be shortened
+                  </h2>
+               </div>
+               <div class="d-flex p-3 ">
+                  <form
+                     action="/"
+                     method="POST"
+                     class="d-flex flex-column  justify-content-center align-items-center"
+                     >
+                     <div id="original" class="mb-3">
+                        <input
+                           class="form-control "
+                           id="input-box"
+                           type="text"
+                           name="url"
+                           required
+                           placeholder="https://www.mywebsite.org"
+                           />
+                     </div>
+                     <small id="emailHelp" class="form-text text"
+                        >Url must be in formate <b>http(s)://mywebsite.xyz</b></small
+                        >
+                     <div class="d-flex flex-row align-items-center">
+                        <span class="mr-3 bold">Want custom shorten url</span>
+                        <label class="switch">
+                        <input class="switch-input" type="checkbox" id="custom-url-check" onclick="myFunction()"/>
+                        <span class="switch-label" data-on="Yes" data-off="No"></span> 
+                        <span class="switch-handle"></span> 
+                        </label>
+                     </div>
+                     <div
+                        id="custom-1"
+                        class=" d-flex  align-items-center"
+                        style="visibility:hidden"
+                        >
+                        <input
+                           class="form-control "
+                           id="input-box"
+                           type="text"
+                           name="custom_url"
+                           placeholder="enter custom end point"
+                           />
+                     </div>
+                     <button
+                        type="submit"
+                        class="btn btn-primary p-3"
+                        style="padding:10px;margin:20px"
+                        >
+                     Short Url
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

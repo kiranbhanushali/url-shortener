@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Url Shortner</title>
+    <script defer>
+      function copy() {
+  let textarea = document.getElementById("input-box");
+  textarea.select();
+  document.execCommand("copy");
+}
+    
+      
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="container-main" class="overlay">
+      <div
+        class="d-flex flex-column  container justify-items-center align-items-center"
+      >
+        <div class="p-3 d-flex title">
+          <h1 id="main-header" class="px-4" style="color:white">
+            <a style="color:white;text-decoration: none;" href="/">Url Shortener</a>
+          </h1>
+          <h4 id="main" class="btn btn-primary" style="color:white">
+            <a style="color:white;text-decoration: none;" href="/a">Analysis</a>
+          </h4>
+        </div>
+        <div
+          id="main-card"
+          class="d-flex  card flex-column justify-content-center align-items-center"
+        >
+          <div
+            class=" p-1 d-flex flex-column justify-content-center align-items-center"
+          >
+            <h2 class="page-header">
+              Your shortened URL
+            </h2>
+            <p>
+              Copy the shortened link and share it in messages, texts, posts,
+              websites and other locations.
+            </p>
+          </div>
+          <div class="d-flex p-3 ">
+            <form
+              action="/"
+              method="POST"
+              class="d-flex flex-column  justify-content-center align-items-center"
+            >
+              <div
+                id="original"
+                class="mb-3 d-flex flex-row align-items-center"
+              >
+                <input
+                  class="form-control "
+                  id="input-box"
+                  type="text"
+                  name="url"
+                  placeholder="https://www.mywebsite.org"
+                  value={{BASE_URL}}{{urlObject.short_url}}
+                />
+                <a class="ml-2 btn btn-light round" onclick='copy()' style="font-size:20px;">
+                  Copy
+                </a>
+              </div>
+              
+              <div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

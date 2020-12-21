@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Url Shortener</title>
+    <script defer>
+      
+    
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="container-main" class="overlay">
+      <div class="d-flex flex-column  container justify-items-center align-items-center" >
+        <div class="p-3 d-flex title">
+           <h1 id="main-header" style="color:white">
+            <a style="color:white;text-decoration: none;" href="/">Url Shortener</a>
+          </h1>
+        </div>
+        
+        <table class="table  text-white ">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Original Url</th>
+              <th scope="col">Shorten Url</th>
+              <th scope="col">Clicks</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each urlObject  }}
+              <tr>
+                <th scope="row">{{@index}}</th>
+                <td>{{ this.original_url }}</td>
+                <td><a>{{ this.short_url }}</td>
+                <td>{{ this.count }}</td>
+              </tr>
+          
+              
+            {{/each}}
+           
+          </tbody>
+        </table>
+      </div>
+       
+      
+      
+    </div>
+  </body>
+</html>
+
