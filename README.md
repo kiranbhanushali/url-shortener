@@ -7,7 +7,7 @@ Short the url randome endpoints.
 Can add custom endpoints.
 Gives Analysis of how many times url clicks on website.
 
-# link : [http://srturl.glitch.me/](http://srturl.glitch.me/)
+# link : [http://urlstr.netlify.app/](http://urlstr.netlify.app/)
 
 ## Running Locally
 
