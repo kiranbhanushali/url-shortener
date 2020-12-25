@@ -2,12 +2,12 @@
 
 A simple url shortener api made with using  Node JS,express,handlebar,MongoDb.
 
-# features 
-Short the url randome endpoints.
-Can add custom endpoints.
-Gives Analysis of how many times url clicks on website.
+# Features 
+## Short the url randome endpoints.
+## Can add custom endpoints.
+## Gives Analysis of how many times url clicks on website.
 
-# link : [http://urlstr.netlify.app/](http://urlstr.netlify.app/)
+
 
 ## Running Locally
 
