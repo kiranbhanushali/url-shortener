@@ -3,7 +3,7 @@
 A simple url shortener api made with using  Node JS,express,handlebar,MongoDb.
 
 # Features 
-## Short the url randome endpoints.
+## Short the url with random endpoints.
 ## Can add custom endpoints.
 ## Gives Analysis of how many times url clicks on website.
 
