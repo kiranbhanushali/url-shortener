@@ -3,9 +3,9 @@
 A simple url shortener api made with using  Node JS,express,handlebar,MongoDb.
 
 # Features 
-## Short the url with random endpoints.
-## Can add custom endpoints.
-## Gives Analysis of how many times url clicks on website.
+* Short the url with random endpoints.
+* Can add custom endpoints.
+* Gives Analysis of how many times url clicks on website.
 
 ## Running On Browser [https://url-snr.herokuapp.com/](https://url-snr.herokuapp.com/)
 
